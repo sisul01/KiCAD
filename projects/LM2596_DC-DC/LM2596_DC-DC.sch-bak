@@ -1,0 +1,300 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Regulator_Switching:LM2596S-ADJ U1
+U 1 1 617DEE63
+P 3800 1850
+F 0 "U1" H 3800 2217 50  0000 C CNN
+F 1 "LM2596S-ADJ" H 3800 2126 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-263-5_TabPin3" H 3850 1600 50  0001 L CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2596.pdf" H 3800 1850 50  0001 C CNN
+	1    3800 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Schottky D1
+U 1 1 617DF967
+P 4400 2300
+F 0 "D1" V 4354 2380 50  0000 L CNN
+F 1 "SK34" V 4445 2380 50  0000 L CNN
+F 2 "Diode_SMD:D_SMB" H 4400 2300 50  0001 C CNN
+F 3 "~" H 4400 2300 50  0001 C CNN
+F 4 "40V" V 4400 2300 50  0001 C CNN "Voltage(DC)"
+F 5 "3A" V 4400 2300 50  0001 C CNN "Current"
+	1    4400 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 617DFCBC
+P 4700 2300
+F 0 "R1" H 4770 2346 50  0000 L CNN
+F 1 "1K" H 4770 2255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4630 2300 50  0001 C CNN
+F 3 "~" H 4700 2300 50  0001 C CNN
+	1    4700 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV1
+U 1 1 617E0BA7
+P 4900 1450
+F 0 "RV1" V 4693 1450 50  0000 C CNN
+F 1 "10k" V 4784 1450 50  0000 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 4900 1450 50  0001 C CNN
+F 3 "~" H 4900 1450 50  0001 C CNN
+	1    4900 1450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:CP C1
+U 1 1 617E1371
+P 2300 2200
+F 0 "C1" H 2418 2246 50  0000 L CNN
+F 1 "220 uF" H 2418 2155 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_8x10.5" H 2338 2050 50  0001 C CNN
+F 3 "~" H 2300 2200 50  0001 C CNN
+F 4 "35V" H 2300 2200 50  0001 C CNN "Voltage(DC)"
+	1    2300 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C2
+U 1 1 617E16D6
+P 2750 2200
+F 0 "C2" H 2868 2246 50  0000 L CNN
+F 1 "0.1uF" H 2868 2155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2788 2050 50  0001 C CNN
+F 3 "~" H 2750 2200 50  0001 C CNN
+F 4 "50V" H 2750 2200 50  0001 C CNN "voltage "
+	1    2750 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 1750 2300 1750
+Wire Wire Line
+	2000 2700 2300 2700
+Wire Wire Line
+	2300 2050 2300 1750
+Connection ~ 2300 1750
+Wire Wire Line
+	2300 1750 2750 1750
+Wire Wire Line
+	2300 2350 2300 2700
+Connection ~ 2300 2700
+Wire Wire Line
+	2300 2700 2750 2700
+Wire Wire Line
+	2750 2050 2750 1750
+Connection ~ 2750 1750
+Wire Wire Line
+	2750 1750 3300 1750
+Wire Wire Line
+	2750 2350 2750 2700
+Connection ~ 2750 2700
+Wire Wire Line
+	2750 2700 3300 2700
+Wire Wire Line
+	3300 1950 3300 2700
+Connection ~ 3300 2700
+Wire Wire Line
+	3300 2700 3800 2700
+Wire Wire Line
+	3800 2150 3800 2700
+Connection ~ 3800 2700
+$Comp
+L Device:L_Core_Ferrite L1
+U 1 1 617E83CB
+P 5150 1950
+F 0 "L1" V 5375 1950 50  0000 C CNN
+F 1 "68uH" V 5284 1950 50  0000 C CNN
+F 2 "Inductor_SMD:L_Bourns_SRR1210A" H 5150 1950 50  0001 C CNN
+F 3 "~" H 5150 1950 50  0001 C CNN
+F 4 "3A" V 5150 1950 50  0001 C CNN "current"
+	1    5150 1950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5000 1950 4400 1950
+Wire Wire Line
+	5300 1950 5450 1950
+Wire Wire Line
+	3800 2700 4000 2700
+Wire Wire Line
+	4400 2150 4400 1950
+Connection ~ 4400 1950
+Wire Wire Line
+	4400 1950 4300 1950
+Wire Wire Line
+	4400 2450 4400 2700
+Connection ~ 4400 2700
+Wire Wire Line
+	4400 2700 4700 2700
+Wire Wire Line
+	4300 1750 4400 1750
+Wire Wire Line
+	4700 2150 4700 1750
+Connection ~ 4700 1750
+Wire Wire Line
+	4700 1750 4900 1750
+Wire Wire Line
+	4700 2450 4700 2700
+Connection ~ 4700 2700
+Wire Wire Line
+	4700 2700 5650 2700
+Wire Wire Line
+	4400 1750 4400 1450
+Wire Wire Line
+	4400 1100 4750 1100
+Connection ~ 4400 1750
+Wire Wire Line
+	4400 1750 4700 1750
+Wire Wire Line
+	4750 1450 4400 1450
+Connection ~ 4400 1450
+Wire Wire Line
+	4400 1450 4400 1100
+Wire Wire Line
+	4900 1600 4900 1750
+Wire Wire Line
+	5050 1450 5450 1450
+Wire Wire Line
+	5450 1450 5450 1950
+Connection ~ 5450 1950
+Wire Wire Line
+	5450 1950 5650 1950
+Wire Wire Line
+	5050 1100 5450 1100
+Wire Wire Line
+	5450 1100 5450 1450
+Connection ~ 5450 1450
+Wire Wire Line
+	5650 2150 5650 1950
+Connection ~ 5650 1950
+Wire Wire Line
+	5650 1950 5950 1950
+Wire Wire Line
+	5650 2450 5650 2700
+Connection ~ 5650 2700
+Wire Wire Line
+	5650 2700 5950 2700
+Wire Wire Line
+	5950 2150 5950 1950
+Connection ~ 5950 1950
+Wire Wire Line
+	5950 1950 6150 1950
+Wire Wire Line
+	5950 2450 5950 2700
+Connection ~ 5950 2700
+Wire Wire Line
+	5950 2700 6150 2700
+$Comp
+L power:GND #PWR01
+U 1 1 617F1C25
+P 4000 3000
+F 0 "#PWR01" H 4000 2750 50  0001 C CNN
+F 1 "GND" H 4005 2827 50  0000 C CNN
+F 2 "" H 4000 3000 50  0001 C CNN
+F 3 "" H 4000 3000 50  0001 C CNN
+	1    4000 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 3000 4000 2700
+Connection ~ 4000 2700
+Wire Wire Line
+	4000 2700 4400 2700
+$Comp
+L Device:CP C4
+U 1 1 617F2AF0
+P 5650 2300
+F 0 "C4" H 5768 2346 50  0000 L CNN
+F 1 "220 uF" H 5768 2255 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_8x10.5" H 5688 2150 50  0001 C CNN
+F 3 "~" H 5650 2300 50  0001 C CNN
+F 4 "35V" H 5650 2300 50  0001 C CNN "Voltage(DC)"
+	1    5650 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C5
+U 1 1 617F37BD
+P 5950 2300
+F 0 "C5" H 6068 2346 50  0000 L CNN
+F 1 "0.1uF" H 6068 2255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5988 2150 50  0001 C CNN
+F 3 "~" H 5950 2300 50  0001 C CNN
+F 4 "50V" H 5950 2300 50  0001 C CNN "voltage "
+	1    5950 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C3
+U 1 1 617F40E8
+P 4900 1100
+F 0 "C3" V 4645 1100 50  0000 C CNN
+F 1 "3300pF" V 4736 1100 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4938 950 50  0001 C CNN
+F 3 "~" H 4900 1100 50  0001 C CNN
+F 4 "50V" H 4900 1100 50  0001 C CNN "voltage "
+	1    4900 1100
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint IN+
+U 1 1 617FE360
+P 2000 1750
+F 0 "IN+" V 2195 1822 50  0000 C CNN
+F 1 "IN+" V 2104 1822 50  0000 C CNN
+F 2 "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm" H 2200 1750 50  0001 C CNN
+F 3 "~" H 2200 1750 50  0001 C CNN
+	1    2000 1750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint IN-
+U 1 1 617FEBF6
+P 2000 2700
+F 0 "IN-" V 2195 2772 50  0000 C CNN
+F 1 "IN-" V 2104 2772 50  0000 C CNN
+F 2 "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm" H 2200 2700 50  0001 C CNN
+F 3 "~" H 2200 2700 50  0001 C CNN
+	1    2000 2700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint OUT+
+U 1 1 617FF2E7
+P 6150 1950
+F 0 "OUT+" V 6104 2138 50  0000 L CNN
+F 1 "OUT+" V 6195 2138 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm" H 6350 1950 50  0001 C CNN
+F 3 "~" H 6350 1950 50  0001 C CNN
+	1    6150 1950
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint OUT-
+U 1 1 61800455
+P 6150 2700
+F 0 "OUT-" V 6104 2888 50  0000 L CNN
+F 1 "OUT-" V 6195 2888 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm" H 6350 2700 50  0001 C CNN
+F 3 "~" H 6350 2700 50  0001 C CNN
+	1    6150 2700
+	0    1    1    0   
+$EndComp
+$EndSCHEMATC

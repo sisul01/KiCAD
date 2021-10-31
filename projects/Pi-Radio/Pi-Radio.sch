@@ -1,0 +1,584 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Pi-Radio Keyboard "
+Date "2021-10-29"
+Rev "1.0"
+Comp "Silvan Grögli"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R R1
+U 1 1 617BBD2B
+P 1800 1600
+F 0 "R1" V 1700 1550 50  0000 L CNN
+F 1 "10k" V 1800 1550 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 1730 1600 50  0001 C CNN
+F 3 "~" H 1800 1600 50  0001 C CNN
+	1    1800 1600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 617BC698
+P 1800 2500
+F 0 "R2" V 1700 2500 50  0000 C CNN
+F 1 "1k" V 1800 2500 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1730 2500 50  0001 C CNN
+F 3 "~" H 1800 2500 50  0001 C CNN
+	1    1800 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push_Dual SW1
+U 1 1 617BD2C6
+P 2000 1950
+F 0 "SW1" H 2150 2100 50  0000 C CNN
+F 1 "Left" H 2150 2200 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H5mm" H 2000 2143 50  0001 C CNN
+F 3 "~" H 2000 2150 50  0001 C CNN
+	1    2000 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 617BEC5B
+P 2200 2500
+F 0 "#PWR05" H 2200 2250 50  0001 C CNN
+F 1 "GND" H 2200 2350 50  0000 C CNN
+F 2 "" H 2200 2500 50  0001 C CNN
+F 3 "" H 2200 2500 50  0001 C CNN
+	1    2200 2500
+	1    0    0    -1  
+$EndComp
+Text GLabel 3100 2800 3    50   Output ~ 0
+Pin8
+Text GLabel 1100 2150 2    50   Input ~ 0
+Pin8
+$Comp
+L Connector:Conn_01x02_Male J8
+U 1 1 617E8DE7
+P 1100 850
+F 0 "J8" H 1208 1031 50  0001 C CNN
+F 1 "Power" H 1000 950 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1100 850 50  0001 C CNN
+F 3 "~" H 1100 850 50  0001 C CNN
+	1    1100 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR01
+U 1 1 617E96BE
+P 1750 850
+F 0 "#PWR01" H 1750 700 50  0001 C CNN
+F 1 "+3.3V" V 1765 978 50  0000 L CNN
+F 2 "" H 1750 850 50  0001 C CNN
+F 3 "" H 1750 850 50  0001 C CNN
+	1    1750 850 
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 617E9BDB
+P 1750 950
+F 0 "#PWR02" H 1750 700 50  0001 C CNN
+F 1 "GND" V 1755 822 50  0000 R CNN
+F 2 "" H 1750 950 50  0001 C CNN
+F 3 "" H 1750 950 50  0001 C CNN
+	1    1750 950 
+	0    -1   -1   0   
+$EndComp
+Text GLabel 1800 2800 3    50   Output ~ 0
+Pin10
+Text GLabel 4450 2800 3    50   Output ~ 0
+Pin15
+Text GLabel 2450 2800 3    50   Output ~ 0
+Pin11
+Text GLabel 3800 2800 3    50   Output ~ 0
+Pin13
+Text GLabel 1800 4850 3    50   Output ~ 0
+Pin16
+Text GLabel 2450 4850 3    50   Output ~ 0
+Pin18
+Text GLabel 1100 1850 2    50   Input ~ 0
+Pin10
+Text GLabel 1100 1750 2    50   Input ~ 0
+Pin11
+Text GLabel 1100 2050 2    50   Input ~ 0
+Pin13
+Text GLabel 1100 1950 2    50   Input ~ 0
+Pin15
+Text GLabel 1100 2350 2    50   Input ~ 0
+Pin16
+Text GLabel 1100 2250 2    50   Input ~ 0
+Pin18
+Wire Wire Line
+	1800 1750 1800 1950
+Connection ~ 1800 1950
+Wire Wire Line
+	1800 1950 1800 2150
+Connection ~ 1800 2150
+Wire Wire Line
+	1800 2150 1800 2350
+Wire Wire Line
+	2200 1950 2200 2150
+Connection ~ 2200 2150
+Wire Wire Line
+	2200 2150 2200 2500
+Wire Wire Line
+	1800 2650 1800 2800
+$Comp
+L power:+3.3V #PWR03
+U 1 1 6183F8AF
+P 1800 1450
+F 0 "#PWR03" H 1800 1300 50  0001 C CNN
+F 1 "+3.3V" V 1815 1578 50  0000 L CNN
+F 2 "" H 1800 1450 50  0001 C CNN
+F 3 "" H 1800 1450 50  0001 C CNN
+	1    1800 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 850  1750 850 
+Wire Wire Line
+	1300 950  1750 950 
+$Comp
+L Device:R R5
+U 1 1 61847CE2
+P 2450 1600
+F 0 "R5" V 2350 1550 50  0000 L CNN
+F 1 "10k" V 2450 1550 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 2380 1600 50  0001 C CNN
+F 3 "~" H 2450 1600 50  0001 C CNN
+	1    2450 1600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 61847CE8
+P 2450 2500
+F 0 "R6" V 2350 2500 50  0000 C CNN
+F 1 "1k" V 2450 2500 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2380 2500 50  0001 C CNN
+F 3 "~" H 2450 2500 50  0001 C CNN
+	1    2450 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push_Dual SW3
+U 1 1 61847CEE
+P 2650 1950
+F 0 "SW3" H 2800 2100 50  0000 C CNN
+F 1 "Up" H 2800 2200 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H5mm" H 2650 2143 50  0001 C CNN
+F 3 "~" H 2650 2150 50  0001 C CNN
+	1    2650 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 61847CF4
+P 2850 2500
+F 0 "#PWR09" H 2850 2250 50  0001 C CNN
+F 1 "GND" H 2850 2350 50  0000 C CNN
+F 2 "" H 2850 2500 50  0001 C CNN
+F 3 "" H 2850 2500 50  0001 C CNN
+	1    2850 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 1750 2450 1950
+Connection ~ 2450 1950
+Wire Wire Line
+	2450 1950 2450 2150
+Connection ~ 2450 2150
+Wire Wire Line
+	2450 2150 2450 2350
+Wire Wire Line
+	2850 1950 2850 2150
+Connection ~ 2850 2150
+Wire Wire Line
+	2850 2150 2850 2500
+Wire Wire Line
+	2450 2650 2450 2800
+$Comp
+L power:+3.3V #PWR07
+U 1 1 61847D03
+P 2450 1450
+F 0 "#PWR07" H 2450 1300 50  0001 C CNN
+F 1 "+3.3V" V 2465 1578 50  0000 L CNN
+F 2 "" H 2450 1450 50  0001 C CNN
+F 3 "" H 2450 1450 50  0001 C CNN
+	1    2450 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 6184A3CB
+P 3100 1600
+F 0 "R9" V 3000 1550 50  0000 L CNN
+F 1 "10k" V 3100 1550 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 3030 1600 50  0001 C CNN
+F 3 "~" H 3100 1600 50  0001 C CNN
+	1    3100 1600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 6184A3D1
+P 3100 2500
+F 0 "R10" V 3000 2500 50  0000 C CNN
+F 1 "1k" V 3100 2500 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3030 2500 50  0001 C CNN
+F 3 "~" H 3100 2500 50  0001 C CNN
+	1    3100 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push_Dual SW5
+U 1 1 6184A3D7
+P 3300 1950
+F 0 "SW5" H 3450 2100 50  0000 C CNN
+F 1 "PlayStop" H 3450 2200 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H5mm" H 3300 2143 50  0001 C CNN
+F 3 "~" H 3300 2150 50  0001 C CNN
+	1    3300 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR012
+U 1 1 6184A3DD
+P 3500 2500
+F 0 "#PWR012" H 3500 2250 50  0001 C CNN
+F 1 "GND" H 3500 2350 50  0000 C CNN
+F 2 "" H 3500 2500 50  0001 C CNN
+F 3 "" H 3500 2500 50  0001 C CNN
+	1    3500 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 1750 3100 1950
+Connection ~ 3100 1950
+Wire Wire Line
+	3100 1950 3100 2150
+Connection ~ 3100 2150
+Wire Wire Line
+	3100 2150 3100 2350
+Wire Wire Line
+	3500 1950 3500 2150
+Connection ~ 3500 2150
+Wire Wire Line
+	3500 2150 3500 2500
+Wire Wire Line
+	3100 2650 3100 2800
+$Comp
+L power:+3.3V #PWR011
+U 1 1 6184A3EC
+P 3100 1450
+F 0 "#PWR011" H 3100 1300 50  0001 C CNN
+F 1 "+3.3V" V 3115 1578 50  0000 L CNN
+F 2 "" H 3100 1450 50  0001 C CNN
+F 3 "" H 3100 1450 50  0001 C CNN
+	1    3100 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 6184C368
+P 3800 1600
+F 0 "R11" V 3700 1550 50  0000 L CNN
+F 1 "10k" V 3800 1550 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 3730 1600 50  0001 C CNN
+F 3 "~" H 3800 1600 50  0001 C CNN
+	1    3800 1600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 6184C36E
+P 3800 2500
+F 0 "R12" V 3700 2500 50  0000 C CNN
+F 1 "1k" V 3800 2500 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3730 2500 50  0001 C CNN
+F 3 "~" H 3800 2500 50  0001 C CNN
+	1    3800 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push_Dual SW6
+U 1 1 6184C374
+P 4000 1950
+F 0 "SW6" H 4150 2100 50  0000 C CNN
+F 1 "Down" H 4150 2200 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H5mm" H 4000 2143 50  0001 C CNN
+F 3 "~" H 4000 2150 50  0001 C CNN
+	1    4000 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR014
+U 1 1 6184C37A
+P 4200 2500
+F 0 "#PWR014" H 4200 2250 50  0001 C CNN
+F 1 "GND" H 4200 2350 50  0000 C CNN
+F 2 "" H 4200 2500 50  0001 C CNN
+F 3 "" H 4200 2500 50  0001 C CNN
+	1    4200 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 1750 3800 1950
+Connection ~ 3800 1950
+Wire Wire Line
+	3800 1950 3800 2150
+Connection ~ 3800 2150
+Wire Wire Line
+	3800 2150 3800 2350
+Wire Wire Line
+	4200 1950 4200 2150
+Connection ~ 4200 2150
+Wire Wire Line
+	4200 2150 4200 2500
+Wire Wire Line
+	3800 2650 3800 2800
+$Comp
+L power:+3.3V #PWR013
+U 1 1 6184C389
+P 3800 1450
+F 0 "#PWR013" H 3800 1300 50  0001 C CNN
+F 1 "+3.3V" V 3815 1578 50  0000 L CNN
+F 2 "" H 3800 1450 50  0001 C CNN
+F 3 "" H 3800 1450 50  0001 C CNN
+	1    3800 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R13
+U 1 1 6184DC69
+P 4450 1600
+F 0 "R13" V 4350 1550 50  0000 L CNN
+F 1 "10k" V 4450 1550 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 4380 1600 50  0001 C CNN
+F 3 "~" H 4450 1600 50  0001 C CNN
+	1    4450 1600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R14
+U 1 1 6184DC6F
+P 4450 2500
+F 0 "R14" V 4350 2500 50  0000 C CNN
+F 1 "1k" V 4450 2500 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4380 2500 50  0001 C CNN
+F 3 "~" H 4450 2500 50  0001 C CNN
+	1    4450 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push_Dual SW7
+U 1 1 6184DC75
+P 4650 1950
+F 0 "SW7" H 4800 2100 50  0000 C CNN
+F 1 "Right" H 4800 2200 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H5mm" H 4650 2143 50  0001 C CNN
+F 3 "~" H 4650 2150 50  0001 C CNN
+	1    4650 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR016
+U 1 1 6184DC7B
+P 4850 2500
+F 0 "#PWR016" H 4850 2250 50  0001 C CNN
+F 1 "GND" H 4850 2350 50  0000 C CNN
+F 2 "" H 4850 2500 50  0001 C CNN
+F 3 "" H 4850 2500 50  0001 C CNN
+	1    4850 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 1750 4450 1950
+Connection ~ 4450 1950
+Wire Wire Line
+	4450 1950 4450 2150
+Connection ~ 4450 2150
+Wire Wire Line
+	4450 2150 4450 2350
+Wire Wire Line
+	4850 1950 4850 2150
+Connection ~ 4850 2150
+Wire Wire Line
+	4850 2150 4850 2500
+Wire Wire Line
+	4450 2650 4450 2800
+$Comp
+L power:+3.3V #PWR015
+U 1 1 6184DC8A
+P 4450 1450
+F 0 "#PWR015" H 4450 1300 50  0001 C CNN
+F 1 "+3.3V" V 4465 1578 50  0000 L CNN
+F 2 "" H 4450 1450 50  0001 C CNN
+F 3 "" H 4450 1450 50  0001 C CNN
+	1    4450 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 618507C4
+P 1800 3650
+F 0 "R3" V 1700 3600 50  0000 L CNN
+F 1 "10k" V 1800 3600 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 1730 3650 50  0001 C CNN
+F 3 "~" H 1800 3650 50  0001 C CNN
+	1    1800 3650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 618507CA
+P 1800 4550
+F 0 "R4" V 1700 4550 50  0000 C CNN
+F 1 "1k" V 1800 4550 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1730 4550 50  0001 C CNN
+F 3 "~" H 1800 4550 50  0001 C CNN
+	1    1800 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push_Dual SW2
+U 1 1 618507D0
+P 2000 4000
+F 0 "SW2" H 2150 4150 50  0000 C CNN
+F 1 "Time" H 2150 4250 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H5mm" H 2000 4193 50  0001 C CNN
+F 3 "~" H 2000 4200 50  0001 C CNN
+	1    2000 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 618507D6
+P 2200 4550
+F 0 "#PWR06" H 2200 4300 50  0001 C CNN
+F 1 "GND" H 2200 4400 50  0000 C CNN
+F 2 "" H 2200 4550 50  0001 C CNN
+F 3 "" H 2200 4550 50  0001 C CNN
+	1    2200 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 3800 1800 4000
+Connection ~ 1800 4000
+Wire Wire Line
+	1800 4000 1800 4200
+Connection ~ 1800 4200
+Wire Wire Line
+	1800 4200 1800 4400
+Wire Wire Line
+	2200 4000 2200 4200
+Connection ~ 2200 4200
+Wire Wire Line
+	2200 4200 2200 4550
+Wire Wire Line
+	1800 4700 1800 4850
+$Comp
+L power:+3.3V #PWR04
+U 1 1 618507E5
+P 1800 3500
+F 0 "#PWR04" H 1800 3350 50  0001 C CNN
+F 1 "+3.3V" V 1815 3628 50  0000 L CNN
+F 2 "" H 1800 3500 50  0001 C CNN
+F 3 "" H 1800 3500 50  0001 C CNN
+	1    1800 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 61852F7F
+P 2450 3650
+F 0 "R7" V 2350 3600 50  0000 L CNN
+F 1 "10k" V 2450 3600 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 2380 3650 50  0001 C CNN
+F 3 "~" H 2450 3650 50  0001 C CNN
+	1    2450 3650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 61852F85
+P 2450 4550
+F 0 "R8" V 2350 4550 50  0000 C CNN
+F 1 "1k" V 2450 4550 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2380 4550 50  0001 C CNN
+F 3 "~" H 2450 4550 50  0001 C CNN
+	1    2450 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push_Dual SW4
+U 1 1 61852F8B
+P 2650 4000
+F 0 "SW4" H 2800 4150 50  0000 C CNN
+F 1 "JazMan" H 2800 4250 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H5mm" H 2650 4193 50  0001 C CNN
+F 3 "~" H 2650 4200 50  0001 C CNN
+	1    2650 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 61852F91
+P 2850 4550
+F 0 "#PWR010" H 2850 4300 50  0001 C CNN
+F 1 "GND" H 2850 4400 50  0000 C CNN
+F 2 "" H 2850 4550 50  0001 C CNN
+F 3 "" H 2850 4550 50  0001 C CNN
+	1    2850 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 3800 2450 4000
+Connection ~ 2450 4000
+Wire Wire Line
+	2450 4000 2450 4200
+Connection ~ 2450 4200
+Wire Wire Line
+	2450 4200 2450 4400
+Wire Wire Line
+	2850 4000 2850 4200
+Connection ~ 2850 4200
+Wire Wire Line
+	2850 4200 2850 4550
+Wire Wire Line
+	2450 4700 2450 4850
+$Comp
+L power:+3.3V #PWR08
+U 1 1 61852FA0
+P 2450 3500
+F 0 "#PWR08" H 2450 3350 50  0001 C CNN
+F 1 "+3.3V" V 2465 3628 50  0000 L CNN
+F 2 "" H 2450 3500 50  0001 C CNN
+F 3 "" H 2450 3500 50  0001 C CNN
+	1    2450 3500
+	1    0    0    -1  
+$EndComp
+Text Notes 1050 1050 0    50   ~ 0
+GND
+$Comp
+L Connector:Conn_01x07_Male J1
+U 1 1 61898177
+P 900 2050
+F 0 "J1" H 1008 2531 50  0000 C CNN
+F 1 "Data" H 1008 2440 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 900 2050 50  0001 C CNN
+F 3 "~" H 900 2050 50  0001 C CNN
+	1    900  2050
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
