@@ -1,1 +1,1 @@
-Directory for user specified part-librarys
+Directory for user specified project templates
