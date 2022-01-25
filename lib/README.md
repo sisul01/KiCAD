@@ -1,1 +1,0 @@
-Directory for user specified project templates
